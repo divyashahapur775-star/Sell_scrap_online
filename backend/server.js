@@ -22,7 +22,7 @@ const { closeExpiredAuctions } = require('./utils/auctionJobs')
 const { seedAdmin }            = require('./utils/seedAdmin')
 
 const app  = express()
-const PORT = process.env.PORT || 5002
+const PORT = process.env.PORT || 5003
 
 /* ─── Middleware ─── */
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }))
