@@ -11,8 +11,12 @@ const businessProfileSchema = new mongoose.Schema({
   city:          { type: String },
   state:         { type: String },
   pincode:       { type: String },
-  documentUrl:   { type: String }, // Cloudinary secure_url
-  documentPublicId: { type: String }, // For deletion
+  documentUrl:   { type: String },
+  documentPublicId: { type: String },
+
+  // Verification metadata
+  verifiedAt:           { type: Date },
+  verificationProvider: { type: String, default: 'DEVELOPMENT_MODE' },
 }, { timestamps: true })
 
 module.exports = mongoose.model('BusinessProfile', businessProfileSchema)
